@@ -102,7 +102,7 @@ var isRunning = (container) => {
 
 var initContainerActions = (container) => {
   return _.chain(["logs"])
-    .concat((isRunning(container)) ? ["console", "restart", "kill"] : ["star", "remove"])
+    .concat((isRunning(container)) ? ["console", "restart", "kill"] : ["start", "remove"])
     .map(initAction(containerActions, container))
     .value();
 };
