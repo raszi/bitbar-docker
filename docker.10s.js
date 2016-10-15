@@ -117,7 +117,7 @@ var initContainerActions = (container) => {
 
 var mapContainer = (container) => {
   return {
-    text: menuLabels.container(container),
+    text:    menuLabels.container(container),
     submenu: initContainerActions(container)
   };
 };
@@ -135,7 +135,7 @@ var initImageActions = (image) => {
 var mapImage = (containers) => {
   return (image) => {
     return {
-      text: menuLabels.image(image),
+      text:    menuLabels.image(image),
       submenu: initImageActions(_.merge({ containers: containers }, image))
     };
   };
@@ -168,7 +168,7 @@ var parseResults = (err, results) => {
   var stoppedCount = results.containers.length - runningCount;
 
   var topItem = {
-    text: menuLabels.main({ running: runningCount, stopped: stoppedCount }),
+    text:     menuLabels.main({ running: runningCount, stopped: stoppedCount }),
     dropdown: false
   };
 
@@ -182,7 +182,7 @@ var parseResults = (err, results) => {
 
 var tasks = {
   containers: _.bind(_.partial(docker.listContainers, { all: true }), docker),
-  images: _.bind(docker.listImages, docker)
+  images:     _.bind(docker.listImages, docker)
 };
 
 async.parallel(tasks, parseResults);
