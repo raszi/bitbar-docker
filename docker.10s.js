@@ -17,12 +17,12 @@ const async = require('async');
 const Docker = require('dockerode');
 const Handlebars = require('handlebars');
 
-const states = ["running", "created", "restarting", "paused", "exited",	"dead"];
+const states = ["running", "created", "restarting", "paused", "exited", "dead"];
 
 const darkStateColors = {
   created: "green",
-	restarting: "yellow",
-	running: "green",
+  restarting: "yellow",
+  running: "green",
   paused: "white",
   exited: "white",
   dead: "red"
@@ -30,8 +30,8 @@ const darkStateColors = {
 
 const lightStateColors = {
   created: "green",
-	restarting: "yellow",
-	running: "green",
+  restarting: "yellow",
+  running: "green",
   paused: "gray",
   exited: "gray",
   dead: "red"
