@@ -101,11 +101,9 @@ var isRunning = (container) => {
 };
 
 var initContainerActions = (container) => {
-  var action = initAction(containerActions, container);
-
   return _.chain(["logs"])
     .concat((isRunning(container)) ? ["console", "restart", "kill"] : ["star", "remove"])
-    .map((a) => { return action(a); })
+    .map(initAction(containerActions, container))
     .value();
 };
 
