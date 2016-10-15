@@ -56,12 +56,12 @@ Handlebars.registerHelper('simpleName', (cnt) => {
 Handlebars.registerHelper('firstTag', firstTag);
 
 Handlebars.registerHelper('autoName', (img) => {
-  var baseName = name = _.head(firstTag(img).split(':', 2));
+  var baseName = _.head(firstTag(img).split(':', 2));
   var takenNames = _.flatMap(img.containers, getNames);
 
-  var name;
+  var name = baseName;
 
-  for(var i = 1, name = baseName; _.includes(takenNames, name); i++) {
+  for(var i = 1; _.includes(takenNames, name); i++) {
     name = baseName + '-' + i;
   }
 
