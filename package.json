@@ -1,0 +1,26 @@
+{
+  "name": "bitbar-docker",
+  "version": "0.0.1",
+  "description": "BitBar Plugin for Docker",
+  "main": "docker.10s.js",
+  "dependencies": {
+    "async": "^2.1.1",
+    "bitbar": "^0.3.0",
+    "dockerode": "^2.3.1",
+    "handlebars": "^4.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whitepages/bitbar-docker/"
+  },
+  "keywords": [
+    "bitbar",
+    "docker"
+  ],
+  "author": "Whitepages Inc.",
+  "license": "MIT"
+}
