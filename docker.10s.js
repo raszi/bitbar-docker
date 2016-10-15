@@ -6,7 +6,7 @@
 // <bitbar.author.github>raszi</bitbar.author.github>
 // <bitbar.desc>Manages the running Docker containers</bitbar.desc>
 // <bitbar.image></bitbar.image>
-// <bitbar.abouturl>https://github.com/whitepages/bitbar-docker/README</bitbar.abouturl>
+// <bitbar.abouturl>https://github.com/whitepages/bitbar-docker/blob/master/README.md</bitbar.abouturl>
 // <bitbar.dependencies>node, npm/lodash, npm/bitbar, npm/async, npm/dockerode, npm/handlebars</bitbar.dependencies>
 
 /*jshint esversion: 6 */
