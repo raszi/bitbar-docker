@@ -71,8 +71,9 @@ Handlebars.registerHelper('autoName', (img) => {
 var t = (template) => { return Handlebars.compile(template); };
 
 const menuLabels = _.mapValues({
+  main:      "⬆ {{running}} ⬇ {{stopped}}",
   container: "{{simpleName this}}/{{shortId this}} ({{Status}})",
-  image: "{{firstTag this}}"
+  image:     "{{firstTag this}}"
 }, t);
 
 function action() {
@@ -185,10 +186,12 @@ var parseResults = (err, results) => {
 
   var containers = _.groupBy(results.containers, 'State');
   var images = _.groupBy(results.images, hostWithOrg);
+
   var runningCount = (containers.running || []).length;
+  var stoppedCount = results.containers.length - runningCount;
 
   var topItem = {
-    text: "⬆ " + runningCount + " ⬇ " + (results.containers.length - runningCount),
+    text: menuLabels.main({ running: runningCount, stopped: stoppedCount }),
     dropdown: false
   };
 
