@@ -19,24 +19,6 @@ const Handlebars = require('handlebars');
 
 const states = ["running", "created", "restarting", "paused", "exited", "dead"];
 
-const darkStateColors = {
-  created: "green",
-  restarting: "yellow",
-  running: "green",
-  paused: "white",
-  exited: "white",
-  dead: "red"
-};
-
-const lightStateColors = {
-  created: "green",
-  restarting: "yellow",
-  running: "green",
-  paused: "gray",
-  exited: "gray",
-  dead: "red"
-};
-
 var firstTag = (img) => {
   return _.last(_.get(img, 'RepoTags[0]', '').split('/'));
 };
@@ -106,11 +88,6 @@ const imageActions = {
 };
 
 var docker = new Docker();
-
-var stateColor = (state) => {
-  var colorScheme = bitbar.darkMode ? darkStateColors : lightStateColors;
-  return colorScheme[state];
-};
 
 var initAction = (actions, item) => {
   return (action) => {
