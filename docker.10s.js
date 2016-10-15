@@ -80,6 +80,7 @@ const containerActions = {
   console: action("/usr/local/bin/docker", "exec", "-t", "-i", "{{Id}}", "/bin/sh"),
   kill:    action("/usr/local/bin/docker", "kill", "{{Id}}", { terminal: false, refresh: true }),
   start:   action("/usr/local/bin/docker", "start", "-a", "-i", "{{Id}}"),
+  restart: action("/usr/local/bin/docker", "restart", "{{Id}}", { terminal: false, refresh: true }),
   remove:  action("/usr/local/bin/docker", "rm", "{{Id}}", { terminal: false, refresh: true })
 };
 
@@ -102,17 +103,10 @@ var isRunning = (container) => {
 var initContainerActions = (container) => {
   var action = initAction(containerActions, container);
 
-  var actions = [action("logs")];
-
-  if (isRunning(container)) {
-    actions.push(action("console"));
-    actions.push(action("kill"));
-  } else {
-    actions.push(action("start"));
-    actions.push(action("remove"));
-  }
-
-  return actions;
+  return _.chain(["logs"])
+    .concat((isRunning(container)) ? ["console", "restart", "kill"] : ["star", "remove"])
+    .map((a) => { return action(a); })
+    .value();
 };
 
 var mapContainer = (container) => {
