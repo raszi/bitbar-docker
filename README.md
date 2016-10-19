@@ -6,7 +6,7 @@ This [BitBar](https://github.com/matryer/bitbar) plugin helps to manage Docker i
 
 Clone it first:
 
-    $ git clone https://github.com/whitepages/bitbar-docker.git && cd bitbar-docker
+    $ git clone https://github.com/whitepages/bitbar-docker.git
     
 The install it:
 
