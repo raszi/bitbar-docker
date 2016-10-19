@@ -7,7 +7,8 @@
     "async": "^2.1.1",
     "bitbar": "^0.3.0",
     "dockerode": "^2.3.1",
-    "handlebars": "^4.0.5"
+    "handlebars": "^4.0.5",
+    "node-osascript": "^1.0.4"
   },
   "devDependencies": {},
   "scripts": {
