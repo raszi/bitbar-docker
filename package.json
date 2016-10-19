@@ -11,6 +11,9 @@
     "node-osascript": "^1.0.4"
   },
   "devDependencies": {},
+  "bin": {
+    "bitbar-docker": "./bin/bitbar-docker.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

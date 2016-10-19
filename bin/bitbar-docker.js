@@ -12,9 +12,9 @@
 /*jshint esversion: 6 */
 
 if (process.argv.length > 2) {
-  const command = require('./lib/command');
+  const command = require('../lib/command');
   command.start(process.argv);
 } else {
-  const menu = require('./lib/menu');
+  const menu = require('../lib/menu');
   menu.display();
 }
