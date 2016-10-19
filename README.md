@@ -1,6 +1,6 @@
 # BitBar Plugin for Docker #
 
-This BitBar plugin helps to manage Docker images and containers from BitBar.
+This [BitBar](https://github.com/matryer/bitbar) plugin helps to manage Docker images and containers from BitBar.
 
 ## Screenshots ##
 
