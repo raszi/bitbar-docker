@@ -12,7 +12,7 @@ The install it:
 
     $ npm install -g bitbar-docker
     
-And finally symlink it to your BitBar plugin folder.
+And finally symlink it to your BitBar plugin folder:
 
     $ ln -s $(which bitbar-docker) bitbar-docker.10s.js
 
