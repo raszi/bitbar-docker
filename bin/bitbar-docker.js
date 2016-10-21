@@ -1,7 +1,7 @@
 #!/usr/bin/env /usr/local/bin/node
 
 // <bitbar.title>Docker Controller</bitbar.title>
-// <bitbar.version>v0.0.2</bitbar.version>
+// <bitbar.version>v0.0.3</bitbar.version>
 // <bitbar.author>KARASZI István</bitbar.author>
 // <bitbar.author.github>raszi</bitbar.author.github>
 // <bitbar.desc>Manages the Docker images and containers</bitbar.desc>
