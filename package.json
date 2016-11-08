@@ -1,6 +1,6 @@
 {
   "name": "bitbar-docker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "BitBar Plugin for Docker",
   "main": "docker.10s.js",
   "dependencies": {
